@@ -1,0 +1,18 @@
+{
+  "Task": "FastDeploy",
+  "Properties": {
+    "target.prop.ro.product.build.version.sdk": "30",
+    "target.prop.ro.product.cpu.abilist": "x86_64;x86;arm64-v8a;armeabi-v7a;armeabi",
+    "target.prop.ro.product.manufacturer": "samsung",
+    "target.prop.ro.product.model": "SM-S901E",
+    "target.prop.ro.product.cpu.abi": "x86_64",
+    "deploy.error.code": "XA0137",
+    "deploy.tool": "xamarin.sync",
+    "deploy.result": "Failed",
+    "deploy.supports.fastdev": "True",
+    "deploy.systemapp": "False",
+    "deploy.duration.ms": "2019",
+    "pii.deploy.error": "The \u0027run-as\u0027 command failed with \u0027{0}\u0027.\nFast Deployment is not currently supported on this device.\nPlease file an issue with the exact error message using the \u0027Help-\u003ESend Feedback-\u003EReport a Problem\u0027 menu item in Visual Studio\nor \u0027Help-\u003EReport a Problem\u0027 in Visual Studio for Mac.\nPlease set the \u0027EmbedAssembliesIntoApk\u0027 MSBuild property to \u0027true\u0027 to disable Fast Deployment in the Visual Studio project property pages, or edit the project file in a text editor.",
+    "pii.deploy.file": ""
+  }
+}

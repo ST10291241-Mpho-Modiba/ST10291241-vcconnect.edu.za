@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuardianApplication.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="220" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            
+            <!-- Header with Gradient Background -->
+            <Grid Grid.Row="0" Padding="30">
+                <Grid.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="#ff4e50" Offset="0.0" />
+                        <GradientStop Color="#f9d423" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Grid.Background>
+
+                <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="appicon.svg" HeightRequest="80" />
+                    <Label Text="Guardian Net"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"
+               Margin="0,10,0,0"/>
+                    <Label Text="Smart Emergency Voice Dispatch"
+               FontSize="16"
+               TextColor="White"
+               HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Grid>
+
+
+            <!-- Main Content -->
+            <VerticalStackLayout Padding="20" Spacing="25" Grid.Row="1">
+                <!-- Instruction Card -->
+                <Frame BackgroundColor="#f0f0f0" CornerRadius="15" HasShadow="True" Padding="20">
+                    <HorizontalStackLayout Spacing="15">
+                        <Image Source="microphone.png" HeightRequest="30" WidthRequest="30"/>
+                        <Label Text="Speak your emergency or press the red button below to send help."
+                               FontSize="15"
+                               TextColor="#333"
+                               VerticalOptions="Center"
+                               LineBreakMode="WordWrap" />
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- Status Display -->
+                <Frame BackgroundColor="#ffe2e2" CornerRadius="12" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Status:"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="DarkRed" />
+                        <Label x:Name="StatusLabel"
+                               Text="Awaiting action..."
+                               FontSize="14"
+                               TextColor="Black" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Transcript Display -->
+                <Frame BackgroundColor="#e6f0ff" CornerRadius="12" HasShadow="True" Padding="15">
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Transcript:"
+                               FontAttributes="Bold"
+                               FontSize="16"
+                               TextColor="#0056b3" />
+                        <Label x:Name="TranscriptLabel"
+                               Text="Transcribed speech will appear here."
+                               FontSize="14"
+                               TextColor="Black" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Record Button -->
+                <Button Text="🎤 Start Voice Request"
+                        Clicked="OnStartRecordingClicked"
+                        BackgroundColor="#007bff"
+                        TextColor="White"
+                        FontSize="16"
+                        CornerRadius="15"
+                        HeightRequest="55"
+                        />
+
+                <!-- Send Button -->
+                <Button Text="🚨 Send Emergency"
+                        Clicked="OnSendEmergencyClicked"
+                        BackgroundColor="#dc3545"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        CornerRadius="15"
+                        HeightRequest="55"
+                        />
+            </VerticalStackLayout>
+
+
+        </Grid>
+
+    </ScrollView>
+</ContentPage>
+
+
